@@ -1,13 +1,16 @@
 package students;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Student {
 	private int age;
 	private String firstName;
 	private String lastName;
 	private double gpa;
 	private int gradeLevel;
-	private static int studentId = 0;
 	private static int studentsCreated = 0;
+	private static final AtomicInteger ID = new AtomicInteger();
+	String studentId;
 	
 	
 	public Student(String fName, String lName, int age, double gpa, int gradeLevel) {
@@ -17,7 +20,11 @@ public class Student {
 		this.gpa = gpa;
 		this.gradeLevel = gradeLevel;
 		studentsCreated++;
-		studentId++;
+		studentId = generateUniqueId();
+	}
+	
+	public static String generateUniqueId() {
+		return String.valueOf(ID.incrementAndGet());
 	}
 	
 	//getters and setters
@@ -63,6 +70,10 @@ public class Student {
 	
 	public int getStudentsCreated() {
 		return studentsCreated;
+	}
+	
+	public String getId() {
+		return studentId;
 	}
 	
 	public String toString() {
