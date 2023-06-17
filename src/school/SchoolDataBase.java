@@ -1,13 +1,13 @@
 package school;
 
 import java.util.*;
-import java.util.Map.Entry;
 
 import students.Student;
 
 public class SchoolDataBase {
 	private HashSet<Student> studentList;
-	private static int id; //incremented every time student is registered
+	private static int studentCount = 0; //incremented every time student is registered
+	private static int MAX_STUDENTS_NUMBER = 1000;
 	
 	public SchoolDataBase() {
 		studentList = new HashSet<>();
@@ -20,23 +20,47 @@ public class SchoolDataBase {
 	
 	
 	public void registerStudent(Student s) {
-		
-		
-	}
-	
-	
-	public int getKeyByValue(Student s) {
-		
-		return 0;
+		boolean check = checkIfInSet(s);
+		if (check) {
+			System.out.println(s.getfirstName() + "  " + s.getLastName() + " is already registered in the system.");
+		} else {
+			studentList.add(s);
+			studentCount++;
+			System.out.println(s.getfirstName() + " " + s.getLastName() + " is registered.");
+		}
 	}
 	
 	
 	public void removeStudent(Student s) {
+		boolean stillExists = checkIfInSet(s);
 		
+		if (stillExists) {
+			studentList.remove(s);
+			System.out.println(s.getfirstName() + " " + s.getLastName() + " is no longer registered.");
+		} else {
+			System.out.println(s.getfirstName() + " " + s.getLastName() + " does not exist in the system.");
+		}
 	}
 	
 	
-	//create method for getting students of certain gpa
+	//return if really redundant
+	public boolean checkIfInSet(Student s) {
+		return studentList.contains(s);
+	}
+	
+	//return set of students whose GPA is between 1 and 2 inclusive
+	public HashSet<Student> getGPASet(double gpa1, double gpa2) {
+		HashSet<Student> studentGPAList = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if(s.getGPA() >= gpa1 && s.getGPA() <= gpa2) {
+				studentGPAList.add(s);
+			}
+		}
+		
+		return studentGPAList;
+		
+	}
 	
 	//create method for getting students of certain grade
 	

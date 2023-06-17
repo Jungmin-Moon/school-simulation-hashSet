@@ -10,6 +10,7 @@ public class Main_Class {
 		Student stu3 = new Student("Chris", "Jones", 14, 2.8, 9);
 		
 		SchoolDataBase schoolData = new SchoolDataBase();
+		
 		/*
 		System.out.println(stu1.getId());
 		System.out.println();
@@ -18,8 +19,8 @@ public class Main_Class {
 		System.out.println();
 		
 		System.out.println(stu3.getId());
-		System.out.println(); */
-		
+		System.out.println(); 
+		*/
 		
 		//schoolData.registerStudent(stu1);
 		//schoolData.registerStudent(stu2);
