@@ -114,4 +114,43 @@ public class SchoolDataBase {
 		
 		return listFirstNameInclusive;
 	}
+	
+	//returns List of students who first name starts with passed in char
+	public ArrayList<Student> firstNameStart(char letter) {
+		ArrayList<Student> listFirstNameStart = new ArrayList<>();
+		
+		for (Student s : studentList) {
+			if (s.getfirstName().charAt(0) == letter) {
+				listFirstNameStart.add(s);
+			}
+		}
+		
+		return listFirstNameStart;
+	}
+	
+	//returns list of students who last name starts with firstLetter and secondLetter inclusive
+	public ArrayList<Student> lastNameStartInclusive(char firstLetter, char secondLetter) {
+		ArrayList<Student> lastNameListInclusive = new ArrayList<>();
+		
+		for (Student s : studentList) {
+			if (s.getLastName().charAt(0) >= firstLetter && s.getLastName().charAt(0) <= secondLetter) {
+				lastNameListInclusive.add(s);
+			}
+		}
+		
+		return lastNameListInclusive;
+	}
+	
+	//returns list of students last name starts with char only
+	public ArrayList<Student> lastNameStart(char letter) {
+		ArrayList<Student> listLastNameStart = new ArrayList<>();
+		
+		for (Student s : studentList) {
+			if (s.getLastName().charAt(0) == letter) {
+				listLastNameStart.add(s);
+			}
+		}
+		
+		return listLastNameStart;
+	}
 }
