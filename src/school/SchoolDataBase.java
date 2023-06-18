@@ -90,7 +90,28 @@ public class SchoolDataBase {
 	}
 	
 	//method to get students between grade level range
+	public HashSet<Student> getListByGradeInclusive(int minGradeLevel, int maxGradeLevel) {
+		HashSet<Student> listTwoGradesInclusive = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if (s.getGradeLevel() >= minGradeLevel && s.getGradeLevel() <= maxGradeLevel) {
+				listTwoGradesInclusive.add(s);
+			}
+		}
+		
+		return listTwoGradesInclusive;
+	}
 	
-	
-	//create method to get students by name between two letters
+	//method to get students by name between two letters first name
+	public HashSet<Student> firstNameStartInclusive(char letter1, char letter2) {
+		HashSet<Student> listFirstNameInclusive = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if (s.getfirstName().charAt(0) >= letter1 && s.getfirstName().charAt(0) <= letter2) {
+				listFirstNameInclusive.add(s);
+			}
+		}
+		
+		return listFirstNameInclusive;
+	}
 }
