@@ -62,6 +62,18 @@ public class SchoolDataBase {
 		
 	}
 	
+	public HashSet<Student> getStudentsOfOneGPASet(double gpa) {
+		HashSet<Student> studentsWithGPAPassed = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if (s.getGPA() == gpa) {
+				studentsWithGPAPassed.add(s);
+			}
+		}
+		
+		return studentsWithGPAPassed;
+	}
+	
 	//create method for getting students of certain grade
 	
 	//create method to get students by name between two letters
