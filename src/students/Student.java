@@ -77,6 +77,6 @@ public class Student {
 	}
 	
 	public String toString() {
-		return String.format("Name: %S %S\nAge: %d\nGrade: %d\nGPA: %.2f\nNext Entry:\n", firstName, lastName, age, gradeLevel, gpa);
+		return String.format("Name: %S %S\nAge: %d\nGrade: %d\nGPA: %.2f", firstName, lastName, age, gradeLevel, gpa);
 	}
 }

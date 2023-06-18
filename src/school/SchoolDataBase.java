@@ -13,12 +13,13 @@ public class SchoolDataBase {
 		studentList = new HashSet<>();
 	}
 	
+	//returns the studentSet
 	public HashSet<Student> getDataBase() {
 		return studentList;
 	}
 	
 	
-	
+	//adds student to set
 	public void registerStudent(Student s) {
 		boolean check = checkIfInSet(s);
 		if (check) {
@@ -30,7 +31,7 @@ public class SchoolDataBase {
 		}
 	}
 	
-	
+	//removes student from set
 	public void removeStudent(Student s) {
 		boolean stillExists = checkIfInSet(s);
 		
@@ -43,7 +44,7 @@ public class SchoolDataBase {
 	}
 	
 	
-	//return if really redundant
+	//return bool if student exists in the set
 	public boolean checkIfInSet(Student s) {
 		return studentList.contains(s);
 	}
@@ -62,6 +63,7 @@ public class SchoolDataBase {
 		
 	}
 	
+	//returns set of students who match the minGPA
 	public HashSet<Student> getStudentsOfOneGPASet(double minGPA) {
 		HashSet<Student> studentsWithGPAPassed = new HashSet<>();
 		
@@ -74,7 +76,21 @@ public class SchoolDataBase {
 		return studentsWithGPAPassed;
 	}
 	
-	//create method for getting students of certain grade
+	//method for getting students of certain grade
+	public HashSet<Student> getStudentsOfGrade(int exactGradeLevel) {
+		HashSet<Student> studentListGradeLevel = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if (s.getGradeLevel() == exactGradeLevel) {
+				studentListGradeLevel.add(s);
+			}
+		}
+		
+		return studentListGradeLevel;
+	}
+	
+	//method to get students between grade level range
+	
 	
 	//create method to get students by name between two letters
 }
