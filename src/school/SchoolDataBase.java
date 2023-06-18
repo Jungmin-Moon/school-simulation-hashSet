@@ -49,11 +49,11 @@ public class SchoolDataBase {
 	}
 	
 	//return set of students whose GPA is between 1 and 2 inclusive
-	public HashSet<Student> getGPASet(double gpa1, double gpa2) {
+	public HashSet<Student> getGPASet(double minGPA, double maxGPA) {
 		HashSet<Student> studentGPAList = new HashSet<>();
 		
 		for (Student s : studentList) {
-			if(s.getGPA() >= gpa1 && s.getGPA() <= gpa2) {
+			if(s.getGPA() >= minGPA && s.getGPA() <= maxGPA) {
 				studentGPAList.add(s);
 			}
 		}
@@ -62,11 +62,11 @@ public class SchoolDataBase {
 		
 	}
 	
-	public HashSet<Student> getStudentsOfOneGPASet(double gpa) {
+	public HashSet<Student> getStudentsOfOneGPASet(double minGPA) {
 		HashSet<Student> studentsWithGPAPassed = new HashSet<>();
 		
 		for (Student s : studentList) {
-			if (s.getGPA() == gpa) {
+			if (s.getGPA() >= minGPA) {
 				studentsWithGPAPassed.add(s);
 			}
 		}
