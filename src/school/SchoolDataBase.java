@@ -153,4 +153,19 @@ public class SchoolDataBase {
 		
 		return listLastNameStart;
 	}
+	
+	//method to find students whose first name or last name contains a substring
+	public HashSet<Student> containsSubString(String str) {
+		HashSet<Student> hasSubStringList = new HashSet<>();
+		
+		for (Student s : studentList) {
+			if (s.getfirstName().contains(str) || s.getLastName().contains(str)) {
+				hasSubStringList.add(s);
+			}
+		}
+		
+		return hasSubStringList;
+	}
+	
+	
 }
