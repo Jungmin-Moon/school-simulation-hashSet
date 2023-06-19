@@ -167,5 +167,16 @@ public class SchoolDataBase {
 		return hasSubStringList;
 	}
 	
+	//method to check if the list of students is empty
+	public boolean isEmpty() {
+		return studentList.isEmpty();
+	}
+	
+	//method returns current size of Collection
+	public int getSize() {
+		return studentList.size();
+	}
+	
+	
 	
 }
