@@ -1,6 +1,6 @@
 package main_class;
 import people.Student;
-import school.SchoolDataBase;
+import school.StudentDataBase;
 public class Main_Class {
 	public static void main(String[] args) {
 		//System.out.println("Fine for now");
@@ -9,7 +9,7 @@ public class Main_Class {
 		Student stu2 = new Student("Jane", "Smith", 17, 4, 12);
 		Student stu3 = new Student("Chris", "Jones", 14, 2.8, 9);
 		
-		SchoolDataBase schoolData = new SchoolDataBase();
+		StudentDataBase schoolData = new StudentDataBase();
 		
 		/*
 		System.out.println(stu1.getId());

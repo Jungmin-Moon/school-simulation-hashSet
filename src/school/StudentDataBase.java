@@ -4,12 +4,12 @@ import java.util.*;
 
 import people.Student;
 
-public class SchoolDataBase {
+public class StudentDataBase {
 	private HashSet<Student> studentList;
 	private static int studentCount = 0; //incremented every time student is registered
 	private static int MAX_STUDENTS_NUMBER = 1000;
 	
-	public SchoolDataBase() {
+	public StudentDataBase() {
 		studentList = new HashSet<>();
 	}
 	
