@@ -1,4 +1,4 @@
-package students;
+package people;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -2,7 +2,7 @@ package school_classes;
 
 import java.util.LinkedList;
 
-import students.Student;
+import people.Student;
 
 public class School_Course {
 	private String className;

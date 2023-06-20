@@ -2,7 +2,7 @@ package school;
 
 import java.util.*;
 
-import students.Student;
+import people.Student;
 
 public class SchoolDataBase {
 	private HashSet<Student> studentList;

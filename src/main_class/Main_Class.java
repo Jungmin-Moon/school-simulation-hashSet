@@ -1,5 +1,5 @@
 package main_class;
-import students.Student;
+import people.Student;
 import school.SchoolDataBase;
 public class Main_Class {
 	public static void main(String[] args) {
