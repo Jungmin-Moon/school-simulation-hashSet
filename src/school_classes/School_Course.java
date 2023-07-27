@@ -17,7 +17,7 @@ public class School_Course {
 	School_Course (String subject, Teacher teacher, String code) {
 		setCourseSubject(subject);
 		setStudentsInCourse(new LinkedList<>());
-		courseTeacher = teacher;
+		setCourseTeacher(teacher);
 		setCourseCode(code);
 		setStudentCount(0);
 	}
@@ -60,6 +60,14 @@ public class School_Course {
 
 	public static void setMAX_STUDENTS_PER_CLASS(int mAX_STUDENTS_PER_CLASS) {
 		MAX_STUDENTS_PER_CLASS = mAX_STUDENTS_PER_CLASS;
+	}
+
+	public Teacher getCourseTeacher() {
+		return courseTeacher;
+	}
+
+	public void setCourseTeacher(Teacher courseTeacher) {
+		this.courseTeacher = courseTeacher;
 	}
 	
 	
