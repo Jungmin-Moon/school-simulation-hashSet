@@ -41,4 +41,8 @@ public class Teacher {
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
+	
+	public String toString() {
+		return "Teacher: " + firstName + " " + lastName + "\nSubject: " + subject;
+	}
 }

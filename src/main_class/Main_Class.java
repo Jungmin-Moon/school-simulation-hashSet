@@ -12,23 +12,16 @@ public class Main_Class {
 		StudentDataBase schoolData = new StudentDataBase();
 		
 		/*
-		System.out.println(stu1.getId());
-		System.out.println();
-		
-		System.out.println(stu2.getId());
-		System.out.println();
-		
-		System.out.println(stu3.getId());
-		System.out.println(); 
-		*/
-		
-		//schoolData.registerStudent(stu1);
-		//schoolData.registerStudent(stu2);
-		//schoolData.registerStudent(stu3);
-		
-		//schoolData.removeStudent(stu2);
-		
-		//System.out.println(schoolData.getDataBase());
+		 * List of things:
+		 * Create a menu system
+		 * 
+		 * Options for creating students, getting the list of students
+		 * removing students, adding students, search option for looking for substrings
+		 * 
+		 * first name search, last name search, partial search
+		 * gpa search
+		 * 
+		 */
 		
 		
 	}
